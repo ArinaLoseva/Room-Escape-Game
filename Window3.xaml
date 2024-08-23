@@ -1,0 +1,102 @@
+﻿<Window x:Class="WpfApp3.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="CubeEscape" Height="1080" Width="1920" ResizeMode="NoResize" >
+
+    <Window.Background>
+        <ImageBrush ImageSource="D:\Рабочий стол\исходники для проекта\black.png" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Name="inventary" Source="D:\Рабочий стол\исходники для проекта\inventary.png" HorizontalAlignment="Right" Margin="0,10,20,10" VerticalAlignment="Center" Width="Auto" Height="Auto"/>
+        <Image Name="game" Source="D:\Рабочий стол\исходники для проекта\room1.png" HorizontalAlignment="Center" Margin="33,26,107,4" VerticalAlignment="Center" Width="Auto" Height="Auto"/>
+
+        <Label Name="Settings" Content="Настройки" FontSize="17" Foreground="White" FontFamily="Courier New" HorizontalAlignment="Center" Margin="76,4,717,0" VerticalAlignment="Top" MouseLeftButtonDown="Settings_Click" Width="111">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+
+        <Label Name="Hints" Content="Использовать подсказку" FontSize="17" Foreground="White" FontFamily="Courier New" HorizontalAlignment="Center" Margin="229,5,424,0" VerticalAlignment="Top" MouseLeftButtonDown="Hints_Click" Width="251">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+
+        <Image Name="left" Source="D:\Рабочий стол\исходники для проекта\left.png" HorizontalAlignment="Left" Margin="100,239,0,261" VerticalAlignment="Center" Width="91" Height="90" MouseLeftButtonDown="Left_Click">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+
+        <Image Name="right" Source="D:\Рабочий стол\исходники для проекта\right.png" HorizontalAlignment="Right" Margin="0,239,182,268" VerticalAlignment="Center" Width="77" Height="73" MouseLeftButtonDown="Right_Click">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+
+        <!--<Label Content="_" Name="vase" MouseLeftButtonDown="Vase_Click" HorizontalAlignment="Center" Margin="613,619,1221.6,311.4" VerticalAlignment="Center" Height="120" Width="79"/>-->
+        <!--<Label Content="________" Name="bed" MouseLeftButtonDown="Bed_Click" HorizontalAlignment="Center" Margin="34,324,717,151" VerticalAlignment="Center" Height="105" Width="153"/>-->
+        <!--<Label Content="________" Name="washstand" MouseLeftButtonDown="Washstand_Click" HorizontalAlignment="Center" Margin="604,266,206,261" VerticalAlignment="Center" Height="53" Width="94"/>-->
+        <!--<Label Content="________"  Name="pot" MouseLeftButtonDown="Pot_Click" HorizontalAlignment="Center" Margin="695,447,173,89" VerticalAlignment="Center" Height="44" Width="36"/>-->
+        <!--<Label Content="_____)___" Name="hand" MouseLeftButtonDown="Hand_Click" HorizontalAlignment="Center" Margin="91,281,762,268" VerticalAlignment="Center" Width="51" Height="31"/>-->
+        <!--<Label Content="________" Name="case" MouseLeftButtonDown="Case_Click" HorizontalAlignment="Center" Margin="192,317,657,144" VerticalAlignment="Center" Height="119" Width="55"/>-->
+        <!--<Label Content="________" Name="clock" MouseLeftButtonDown="Clock_Click" HorizontalAlignment="Left" Margin="566,127,0,0" VerticalAlignment="Top" Height="223" Width="79"/>-->
+        <!--<Label Content="________" Name="box" MouseLeftButtonDown="Box_Click" HorizontalAlignment="Center" Margin="502,429,346,89" VerticalAlignment="Center" Height="62" Width="56"/>-->
+        <!--<Label Content="________" Name="box_button" MouseLeftButtonDown="Box_button_Click" HorizontalAlignment="Center" Margin="406,341,468,208" VerticalAlignment="Center" Height="31"/>-->
+        <!--<Label Content="________" Name="carpet" MouseLeftButtonDown="Carpet_Click" HorizontalAlignment="Left" Margin="665,473,0,0" VerticalAlignment="Top" Height="39" Width="115"/>-->
+        <!--<Label Content="________" Name="door" MouseLeftButtonDown="Door_Click" HorizontalAlignment="Left" Margin="695,246,0,0" VerticalAlignment="Top" Height="64"/>-->
+
+
+        
+        <Label Content="" Name="box" MouseLeftButtonDown="Box_Click" HorizontalAlignment="Left" Margin="856,591,0,0" VerticalAlignment="Top" Height="80" Width="80"/>
+        <Label Content="" Name="clock" MouseLeftButtonDown="Clock_Click" HorizontalAlignment="Left" Margin="950,191,0,0" VerticalAlignment="Top" Height="200" Width="95"/>
+        <Label Content="" Name="bed" MouseLeftButtonDown="Bed_Click" HorizontalAlignment="Left" Margin="210,400,0,0" VerticalAlignment="Top" Height="130" Width="250"/>
+        <Label Content="" Name="washstand" MouseLeftButtonDown="Washstand_Click" HorizontalAlignment="Left" Margin="1030,350,0,0" VerticalAlignment="Top" Height="100" Width="70"/>
+
+        <Label Content="" Name="hand" MouseLeftButtonDown="Hand_Click" HorizontalAlignment="Left" Margin="240,380,0,0" VerticalAlignment="Top" Height="70" Width="150"/>
+        <Label Content="" Name="case" MouseLeftButtonDown="Case_Click" HorizontalAlignment="Left" Margin="410,380,0,0" VerticalAlignment="Top" Height="200" Width="90"/>
+        <TextBox Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="683,550,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="" Name="box_button" MouseLeftButtonDown="Box_button_Click" HorizontalAlignment="Left" Margin="715,460,0,0" VerticalAlignment="Top"  Height="50" Width="50"/>
+        <Label Content="" Name="carpet" MouseLeftButtonDown="Carpet_Click" HorizontalAlignment="Left" Margin="1060,650,0,0" VerticalAlignment="Top" Height="70" Width="150"/>
+        <Label Content="" Name="door" MouseLeftButtonDown="Door_Click" HorizontalAlignment="Left" Margin="1100,320,0,0" VerticalAlignment="Top" Height="200" Width="90"/>
+        <Label Name="Hint_text" Content=" " FontSize="17" Foreground="White" FontFamily="Courier New" HorizontalAlignment="Left" Margin="900,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="" Name="vase" MouseLeftButtonDown="Vase_Click" HorizontalAlignment="Left" Margin="329,367,0,0" VerticalAlignment="Top" Height="119" Width="80"/>
+        <Label Content="" Name="pot" MouseLeftButtonDown="Pot_Click" HorizontalAlignment="Left" Margin="1138,610,0,0" VerticalAlignment="Top" Height="110" Width="70" />
+
+
+    </Grid>
+</Window>
